@@ -1,0 +1,17 @@
+#Chrome webdriver, Selenium, Python
+#Opens google.com main page, checks the work of search box by writing "What is QA?" in it
+
+import time
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+driver = webdriver.Chrome()
+time.sleep(3)
+driver.get("https://www.google.com/")
+time.sleep(3)
+search_box = driver.find_element(By.NAME, "q")
+search_box.send_keys("What is QA?")
+time.sleep(3)
+search_box.submit()
+time.sleep(3)
+driver.quit()
