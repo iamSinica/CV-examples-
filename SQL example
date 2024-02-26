@@ -1,0 +1,29 @@
+CREATE TABLE customers (
+  id INT
+);
+ALTER TABLE customers
+ADD COLUMN city varchar(255);
+INSERT INTO customers (id, city) VALUES (1, 'London');
+INSERT INTO customers (id, city) VALUES (2, 'Paris');
+INSERT INTO customers (id, city) VALUES (3, 'Athens');
+INSERT INTO customers (id, city) VALUES (4, 'New York');
+INSERT INTO customers (id, city) VALUES (5, 'Bagan');
+INSERT INTO customers (id, city) VALUES (6, 'Anapa');
+INSERT INTO customers (id, city) VALUES (7, 'Chicago');
+INSERT INTO customers (id, city) VALUES (8, 'Moscow');
+
+
+1) 1) Составить запрос, который позволит выбрать столбец City из таблицы Customers:
+
+SELECT city FROM customers
+
+2) 2) Выберите все записи из таблицы Customers так, чтобы сортировка результата была в
+обратном в алфавитном порядке по столбцу City:
+
+SELECT * from customers ORDER BY city DESC
+
+3) Выберите все записи в таблице Customers, в которых значение столбца City начинается
+с буквы "а":
+
+SELECT * from customers WHERE city LIKE 'A%'
+
